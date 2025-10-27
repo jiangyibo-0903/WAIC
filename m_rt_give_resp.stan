@@ -27,8 +27,8 @@ data {
   int<lower=0, upper=1> resp[N, J];  
   matrix[N, J] rt; 
   vector[V] s; 
-  vector[J] constant_a; // 指定的 a 常数均值
-  vector[J] constant_b; // 指定的 b 常数均值
+  vector[J] constant_a; 
+  vector[J] constant_b; 
 }  
   
 transformed data {

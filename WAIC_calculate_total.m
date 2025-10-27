@@ -35,7 +35,7 @@ eap_tau=mean(mcmc_tau,1);
 eap_varphi=mean(mcmc_varphi);
 eap_zeta=mean(mcmc_zeta,1);
 
-%P的有关计算
+%P
 for i=1:N
    f1=normpdf(eap_th(i),0,1);
    y=resp(i,:);

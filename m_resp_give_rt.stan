@@ -27,11 +27,11 @@ data {
   int<lower=0, upper=1> resp[N, J];  
   matrix[N, J] rt; 
   vector[V] s; 
-  vector[J] constant_gamma; // 指定的 gamma 常数均值
-  vector[J] constant_phi;   // 指定的 phi 常数均值
-  vector[J] constant_zeta;  // 指定的 zeta 常数均值
-  vector[V] constant_lambda; // 指定的 lambda 常数向量
-  real constant_varphi; // 指定的 varphi 常数均值
+  vector[J] constant_gamma; 
+  vector[J] constant_phi;   
+  vector[J] constant_zeta;  
+  vector[V] constant_lambda; 
+  real constant_varphi; 
 }  
   
 transformed data {
@@ -58,7 +58,6 @@ parameters {
   real<lower=0> sigma2_b;  
 }  
 transformed parameters {  
-  // 不再需要 lambda_free，因为 lambda 现在是常数
 }    
 model {  
   for (j in 1:J) {  
